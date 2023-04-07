@@ -1,9 +1,9 @@
 const User = require('./User');
-const Food = require('./Food');
+const Food = require('./Food')
 
 User.hasMany(Food, {
     foreignKey: 'user_id',
-    onDelete: 'Cascade'
+    onDelete: 'CASCADE'
 });
 
 Food.belongsTo(User, {
