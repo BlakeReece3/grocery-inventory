@@ -1,5 +1,7 @@
 const User = require('./User');
-const Food = require('./Food')
+const Need = require('./Need');
+const Inventory = require('./Inventory');
+
 
 User.hasMany(Food, {
     foreignKey: 'user_id',
@@ -10,4 +12,4 @@ Food.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
-module.exports = { User, Food };
+module.exports = { User, Need, Inventory };
