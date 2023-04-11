@@ -1,0 +1,17 @@
+<!-- Loop over each object in the projects array -->
+{{#each inventory as |inv| }}
+<div class="row mb-4 project">
+  
+{{inv.name}}, {{User.name}}
+</div>
+{{/each}}
+
+
+{{#each needs as |need| }}
+<div class="row mb-4 project">
+  
+{{need.name}}
+</div>
+{{/each}}
+
+<p>homepage.handlebars</p>
