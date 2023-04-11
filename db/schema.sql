@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS grocery-inventory_db;
-CREATE DATABASE grocery-inventory_db;
+DROP DATABASE IF EXISTS grocery_inventory_db;
+CREATE DATABASE grocery_inventory_db;

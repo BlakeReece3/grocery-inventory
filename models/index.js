@@ -3,12 +3,12 @@ const Need = require('./Need');
 const Inventory = require('./Inventory');
 
 
-User.hasMany(Food, {
+User.hasMany(Need, {
     foreignKey: 'user_id',
     onDelete: 'CASCADE'
 });
 
-Food.belongsTo(User, {
+Need.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
