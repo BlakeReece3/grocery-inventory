@@ -24,11 +24,11 @@ const inventoryFormHandler = async (event) => {
   const needsFormHandler = async (event) => {
     event.preventDefault();
   
-    const needsname = document.querySelector('#needs-name').value.trim();
+    const needsname = document.querySelector('#need-name').value.trim();
     
   
     if (needsname) {
-      const response = await fetch(`/api/need`, {
+      const response = await fetch(`/api/needs`, {
         method: 'POST',
         body: JSON.stringify({ name: needsname}),
         headers: {
