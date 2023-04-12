@@ -21,6 +21,22 @@ const inventoryFormHandler = async (event) => {
     }
   };
   
+  const delInv = async (event) => {
+    if (event.target.hasAttribute('data-id')) {
+      const id = event.target.getAttribute('data-id');
+  
+      const response = await fetch(`/api/inventory/${id}`, {
+        method: 'DELETE',
+      });
+  
+      if (response.ok) {
+        document.location.replace('/profile');
+      } else {
+        alert('Failed to delete project');
+      }
+    }
+  };
+  
   const needsFormHandler = async (event) => {
     event.preventDefault();
   
@@ -43,21 +59,21 @@ const inventoryFormHandler = async (event) => {
       }
     }
   };
-  // const delButtonHandler = async (event) => {
-  //   if (event.target.hasAttribute('data-id')) {
-  //     const id = event.target.getAttribute('data-id');
+  const delNeeds = async (event) => {
+    if (event.target.hasAttribute('data-id')) {
+      const id = event.target.getAttribute('data-id');
+      
+      const response = await fetch(`/api/needs/${id}`, {
+        method: 'DELETE',
+      });
   
-  //     const response = await fetch(`/api/projects/${id}`, {
-  //       method: 'DELETE',
-  //     });
-  
-  //     if (response.ok) {
-  //       document.location.replace('/profile');
-  //     } else {
-  //       alert('Failed to delete project');
-  //     }
-  //   }
-  // };
+      if (response.ok) {
+        document.location.replace('/profile');
+      } else {
+        alert('Failed to delete project');
+      }
+    }
+  };
   
   document
     .querySelector('.new-inventory-form')
@@ -67,7 +83,11 @@ const inventoryFormHandler = async (event) => {
     .querySelector('.need-form')
     .addEventListener('submit', needsFormHandler)
   
-  // document
-  //   .querySelector('.project-list')
-  //   .addEventListener('click', delButtonHandler);
+    document
+    .querySelector('.inventory-list')
+    .addEventListener('click', delInv);
+
+  document
+    .querySelector('.needs-list')
+    .addEventListener('click', delNeeds);
   
