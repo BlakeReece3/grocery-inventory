@@ -7,7 +7,12 @@ router.get('/', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
     const inventoryData = await Inventory.findAll({
-      include: [User],
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
     });
 
     const needData = await Need.findAll({
@@ -39,10 +44,11 @@ router.get('/profile', withAuth, async (req, res) => {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Need }, { model: Inventory }],
+      include: [ Inventory, Need ]
     });
 
     const user = userData.get({ plain: true });
+    console.log(user);
 
     res.render('profile', {
       ...user,
