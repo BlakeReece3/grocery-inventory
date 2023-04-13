@@ -3,13 +3,43 @@
 @import "https://unpkg.com/open-props/normalize.min.css";
 
 header {
-    background-image: var(--gradient-6);
+    background-image: var(--gradient-9);
 }
 
 title {
-    color: var(--orange-1);
+    color: var(--grey-12);
 }
 
 h1 {
-   color: var(--blue-7); 
+   color: var(--grey-1);
+   background-color: var(--gray-12);
+   max-inline-size: var(--size-header-2);
+}
+
+nav {
+ color: var(--gray-12);
+}
+
+.div {
+    color: var(--gray-12);
+}
+
+/* unvisited link */
+a:link {
+    color: var(--orange-1);
+  }
+  
+  /* visited link */
+  a:visited {
+    color: var(--orange-1);
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: var(--orange-1);
+  }
+  
+  /* selected link */
+  a:active {
+    color: var(--orange-1);
 }
