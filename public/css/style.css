@@ -1,0 +1,15 @@
+/* import open-props for css */
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
+
+header {
+    background-image: var(--gradient-6);
+}
+
+title {
+    color: var(--orange-1);
+}
+
+h1 {
+   color: var(--blue-7); 
+}
