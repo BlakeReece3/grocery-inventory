@@ -11,6 +11,8 @@ I want to plan my shopping trips
 So that I can get the needed groceries
 
 ## Screenshots:
+![Screenshot 2023-04-13 at 7 45 04 PM](https://user-images.githubusercontent.com/112834113/231937947-ad6a6a71-7a24-4d18-8534-e8041fe52afc.png)
+![Screenshot 2023-04-13 at 7 45 49 PM](https://user-images.githubusercontent.com/112834113/231937981-f18ed087-d85f-4bb0-a6f1-5b7f67bb7955.png)
 
 
 ## Links:
