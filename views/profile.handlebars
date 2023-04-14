@@ -1,9 +1,11 @@
-<div class="row">
+<div class="row" style="display:flex">
   <div class="col-auto">
     <h2>Welcome, {{name}}!</h2>
   </div>
 </div>
+<div class="row" style="display:inline-block">
 <h2>Add to Inventory</h2>
+</div>
 <form class="form new-inventory-form">
       <div class="form-group">
         <label for="project-name">Food Item:</label>
@@ -25,8 +27,9 @@
 </div>
 {{/each}}
 </div>
-
+<div class="row" style="display:inline-block">
 <h2>Add to Needs</h2>
+</div>
 <form class="form need-form">
       <div class="form-group">
         <label for="project-name">Food Item:</label>
